@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() {
         VideoLength = MyVideoPlayer.length;
+        Player.GetComponent<Player>().SetPlayerActive(false);
     }
 
     private void Start() {

@@ -157,9 +157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062b2e7ef785c6f49b6cb058cbfeb87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 7240989941944286558}
   JumpForce: 5
   MoveForce: 5
   TimeToSpawn: 2
+  PlayerAnimator: {fileID: 7688824123244487149}
 --- !u!50 &7240989941944286558
 Rigidbody2D:
   serializedVersion: 5
