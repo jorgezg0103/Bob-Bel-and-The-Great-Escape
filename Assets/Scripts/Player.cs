@@ -104,7 +104,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void SetPlayerActive(bool enable) {
+    public void SetPlayerActive(bool enable) {
+        if(enable) {
+            Rigidbody.gravityScale = GravityScale;
+        }
+        else {
+            Rigidbody.gravityScale = 0f;
+        }
         gameObject.transform.GetChild(0).GetComponent<Renderer>().enabled = enable;
         gameObject.GetComponent<Collider2D>().enabled = enable;
     }
