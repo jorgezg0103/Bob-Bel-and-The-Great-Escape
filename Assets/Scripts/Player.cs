@@ -10,31 +10,54 @@ public class Player : MonoBehaviour
 
     private float Health = 1f;
     private Vector2 CurrentCheckpoint;
+    private float TimeInterval = 0.25f;
+    private float Timer;
 
     private void Awake() {
         Rigidbody = GetComponent<Rigidbody2D>();
         CurrentCheckpoint = transform.position;
-    }
-    void Start() {
-        
+        Timer = TimeInterval;
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("Going up");
-            Rigidbody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-        }
-        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
-            Rigidbody.AddForce(Vector2.left * MoveForce, ForceMode2D.Impulse);
-        }
-        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
-            Rigidbody.AddForce(Vector2.right * MoveForce, ForceMode2D.Impulse);
-        }
+        PlayerMovement();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.gameObject.tag == "Respawn") {
-            CurrentCheckpoint = collision.transform.position;
+        // An interaction system with an Interface would be more appropiate :)
+        GameObject collidedObj = collision.gameObject;
+        if(collidedObj.tag == "Respawn") {
+            CurrentCheckpoint = collidedObj.transform.position;
+        }
+        else if(collidedObj.tag == "StickyWall") {
+
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) {
+        GameObject collidedObj = collision.gameObject;
+        if(collidedObj.tag == "WindGust") {
+            collidedObj.GetComponent<WindGust>().AddWindThrust(gameObject);
+        }
+    }
+
+    private void PlayerMovement() {
+        if(Timer >= TimeInterval) {
+            if(Input.GetKeyDown(KeyCode.Space)) {
+                Rigidbody.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+                Timer = 0f;
+            }
+            if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+                Rigidbody.AddForce(Vector2.left * MoveForce, ForceMode2D.Impulse);
+                Timer = 0f;
+            }
+            if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
+                Rigidbody.AddForce(Vector2.right * MoveForce, ForceMode2D.Impulse);
+                Timer = 0f;
+            }
+        }
+        else {
+            Timer += Time.deltaTime;
         }
     }
 
@@ -54,7 +77,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator MoveToCheckpoint(float seconds) {
         yield return new WaitForSeconds(seconds);
-        SetPlayerActive(true);
         transform.position = CurrentCheckpoint;
+        SetPlayerActive(true);
     }
 }
