@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -9,18 +10,34 @@ public class Player : MonoBehaviour
     [SerializeField] private float TimeToSpawn = 1.5f;
 
     private float Health = 1f;
+    private float GravityScale;
     private Vector2 CurrentCheckpoint;
     private float TimeInterval = 0.25f;
     private float Timer;
 
+    private bool Stuck = false;
+    private int UnstuckTries = 0;
+    private Vector2 UnStuckDirection = new Vector2(0, 0);
+
+    private Animator PlayerAnimator;
+
     private void Awake() {
         Rigidbody = GetComponent<Rigidbody2D>();
+        GravityScale = Rigidbody.gravityScale;
         CurrentCheckpoint = transform.position;
         Timer = TimeInterval;
+        PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
     }
 
     void Update() {
-        PlayerMovement();
+        if(!Stuck) {
+            PlayerMovement();
+        }
+        else {
+            if(Keyboard.current.anyKey.wasPressedThisFrame) {
+                TryToUnStuck();
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -30,7 +47,11 @@ public class Player : MonoBehaviour
             CurrentCheckpoint = collidedObj.transform.position;
         }
         else if(collidedObj.tag == "StickyWall") {
-
+            Stuck = true;
+            Rigidbody.angularVelocity = 0f;
+            Rigidbody.linearVelocity = Vector2.zero;
+            Rigidbody.gravityScale = 0f;
+            UnStuckDirection = collidedObj.transform.up;
         }
     }
 
@@ -38,6 +59,19 @@ public class Player : MonoBehaviour
         GameObject collidedObj = collision.gameObject;
         if(collidedObj.tag == "WindGust") {
             collidedObj.GetComponent<WindGust>().AddWindThrust(gameObject);
+        }
+    }
+
+    private void TryToUnStuck() {
+        UnstuckTries++;
+        int random = Random.Range(4, 8);
+        PlayerAnimator.Play("Stuck");
+        if(UnstuckTries >= random) {
+            Stuck = false;
+            Rigidbody.gravityScale = GravityScale;
+            Debug.Log("Unstuck! Nº of tries: " + UnstuckTries);
+            UnstuckTries = 0;
+            Rigidbody.AddForce(UnStuckDirection * JumpForce, ForceMode2D.Impulse);
         }
     }
 
@@ -71,7 +105,7 @@ public class Player : MonoBehaviour
     }
 
     private void SetPlayerActive(bool enable) {
-        gameObject.GetComponent<Renderer>().enabled = enable;
+        gameObject.transform.GetChild(0).GetComponent<Renderer>().enabled = enable;
         gameObject.GetComponent<Collider2D>().enabled = enable;
     }
 
