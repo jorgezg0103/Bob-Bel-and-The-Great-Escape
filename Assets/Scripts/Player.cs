@@ -4,38 +4,38 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D Rigidbody;
+    [SerializeField] private Rigidbody2D Rigidbody;
+    [SerializeField] private Animator PlayerAnimator;
     [SerializeField] private float JumpForce = 5f;
     [SerializeField] private float MoveForce = 5f;
     [SerializeField] private float TimeToSpawn = 1.5f;
+    [SerializeField] private float GravityScale = 0.2f;
 
     private float Health = 1f;
-    private float GravityScale;
     private Vector2 CurrentCheckpoint;
     private float TimeInterval = 0.25f;
     private float Timer;
+    private bool IsPlayerActive = true;
 
     private bool Stuck = false;
     private int UnstuckTries = 0;
     private Vector2 UnStuckDirection = new Vector2(0, 0);
 
-    private Animator PlayerAnimator;
 
     private void Awake() {
-        Rigidbody = GetComponent<Rigidbody2D>();
-        GravityScale = Rigidbody.gravityScale;
         CurrentCheckpoint = transform.position;
         Timer = TimeInterval;
-        PlayerAnimator = gameObject.GetComponentInChildren<Animator>();
     }
 
     void Update() {
-        if(!Stuck) {
-            PlayerMovement();
-        }
-        else {
-            if(Keyboard.current.anyKey.wasPressedThisFrame) {
-                TryToUnStuck();
+        if(IsPlayerActive) {
+            if(!Stuck) {
+                PlayerMovement();
+            }
+            else {
+                if(Keyboard.current.anyKey.wasPressedThisFrame) {
+                    TryToUnStuck();
+                }
             }
         }
     }
@@ -104,7 +104,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void SetPlayerActive(bool enable) {
+    public void SetPlayerActive(bool enable) {
+        if(enable) {
+            Rigidbody.gravityScale = GravityScale;
+        }
+        else {
+            Rigidbody.gravityScale = 0f;
+        }
+        IsPlayerActive = enable;
         gameObject.transform.GetChild(0).GetComponent<Renderer>().enabled = enable;
         gameObject.GetComponent<Collider2D>().enabled = enable;
     }
