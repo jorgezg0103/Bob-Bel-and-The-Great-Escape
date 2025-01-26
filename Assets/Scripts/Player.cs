@@ -7,12 +7,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D Rigidbody;
     [SerializeField] private Animator PlayerAnimator;
-    [SerializeField] private AudioSource PopSound;
-    [SerializeField] private AudioSource BlorpSound;
     [SerializeField] private float JumpForce = 5f;
     [SerializeField] private float MoveForce = 5f;
     [SerializeField] private float TimeToSpawn = 1.5f;
     [SerializeField] private float GravityScale = 0.2f;
+
+    [SerializeField] private AudioSource PopSound;
+    [SerializeField] private AudioSource BlorpSound;
+    [SerializeField] private AudioSource CheckpointSound;
 
     private float Health = 1f;
     private Vector2 CurrentCheckpoint;
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
         GameObject collidedObj = collision.gameObject;
         if(collidedObj.tag == "Respawn") {
             CurrentCheckpoint = collidedObj.transform.position;
+            CheckpointSound.Play();
         }
         else if(collidedObj.tag == "StickyWall") {
             Stuck = true;
