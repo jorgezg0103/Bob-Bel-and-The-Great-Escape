@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 4bfcbbb6f85ae464c91f1c1b276683e9
+guid: e04ac2b5bc9ecc746b688494c06ce0a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7099069570471850454
-    second: nivel1.6_0
+      213: -190964375154869864
+    second: Nivel1_6_0
   - first:
-      213: 7228941999196915608
-    second: nivel1.6_1
+      213: 6794396712913858565
+    second: Nivel1_6_1
   - first:
-      213: 3328929578879565071
-    second: nivel1.6_2
-  - first:
-      213: 7322219411549620136
-    second: nivel1.6_3
+      213: 489453468729370195
+    second: Nivel1_6_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nivel1.6_0
+      name: Nivel1_6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2e8d3096d90b7d90800000000000000
-      internalID: -7099069570471850454
+      spriteID: 899b32e99ee895df0800000000000000
+      internalID: -190964375154869864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nivel1.6_1
+      name: Nivel1_6_1
       rect:
         serializedVersion: 2
-        x: 555
+        x: 449
         y: 0
-        width: 1365
+        width: 1471
         height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -146,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 897c80c927c525460800000000000000
-      internalID: 7228941999196915608
+      spriteID: 500ff48efcb8a4e50800000000000000
+      internalID: 6794396712913858565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nivel1.6_2
+      name: Nivel1_6_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 149
+        y: 144
         width: 298
-        height: 495
+        height: 500
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0d386780dbb23e20800000000000000
-      internalID: 3328929578879565071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nivel1.6_3
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 187
-        width: 49
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a782e092cfbd9560800000000000000
-      internalID: 7322219411549620136
+      spriteID: 35662b92653eac600800000000000000
+      internalID: 489453468729370195
       vertices: []
       indices: 
       edges: []
@@ -200,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 32902dfbd3946cf42ab840b4289b4d25
+    spriteID: 0ac6e5319d3ef7b44b57382b137dd805
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nivel1.6_0: -7099069570471850454
-      nivel1.6_1: 7228941999196915608
-      nivel1.6_2: 3328929578879565071
-      nivel1.6_3: 7322219411549620136
+      Nivel1_6_0: -190964375154869864
+      Nivel1_6_1: 6794396712913858565
+      Nivel1_6_2: 489453468729370195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
