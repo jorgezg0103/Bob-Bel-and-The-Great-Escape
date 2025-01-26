@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 99abebd4a52ac8d4aafe43e914a3a489
+guid: ce84b24c194d9254b90db014071d52bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6004051176394499508
-    second: nivel1.8_0
+      213: -1281820027795237076
+    second: Nivel1_2_0
   - first:
-      213: 7917042355605752642
-    second: nivel1.8_1
+      213: 2169514655296891508
+    second: Nivel1_2_1
   - first:
-      213: 5003137369369466243
-    second: nivel1.8_2
+      213: -5155754297881232717
+    second: Nivel1_2_2
+  - first:
+      213: 5649298882499744215
+    second: Nivel1_2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nivel1.8_0
+      name: Nivel1_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,42 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4a5db114435daca0800000000000000
-      internalID: -6004051176394499508
+      spriteID: c279841e97f063ee0800000000000000
+      internalID: -1281820027795237076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nivel1.8_1
-      rect:
-        serializedVersion: 2
-        x: 486
-        y: 422
-        width: 1434
-        height: 429
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24b4a9d731cfedd60800000000000000
-      internalID: 7917042355605752642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nivel1.8_2
+      name: Nivel1_2_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 373
+        width: 271
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +146,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 385dfbffde6be6540800000000000000
-      internalID: 5003137369369466243
+      spriteID: 47aa9fb951aab1e10800000000000000
+      internalID: 2169514655296891508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel1_2_2
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 124
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba789d48c41378b0800000000000000
+      internalID: -5155754297881232717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nivel1_2_3
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 0
+        width: 1283
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d198610767566e40800000000000000
+      internalID: 5649298882499744215
       vertices: []
       indices: 
       edges: []
@@ -175,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b23fe084ec1047742bc2b6d3a795c855
+    spriteID: 263b5be83747b0a4abf61104f978c9f1
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nivel1.8_0: -6004051176394499508
-      nivel1.8_1: 7917042355605752642
-      nivel1.8_2: 5003137369369466243
+      Nivel1_2_0: -1281820027795237076
+      Nivel1_2_1: 2169514655296891508
+      Nivel1_2_2: -5155754297881232717
+      Nivel1_2_3: 5649298882499744215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
