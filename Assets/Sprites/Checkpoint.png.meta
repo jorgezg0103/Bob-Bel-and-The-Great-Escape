@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 4102b4cba1c021c499fea43410847938
+guid: 9bea6895697bca842a5beda8340a4902
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5643614517290544750
-    second: nivel2.1_0
-  - first:
-      213: 4051116327470234374
-    second: nivel2.1_1
+      213: -3448120935943364757
+    second: Checkpoint_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nivel2.1_0
+      name: Checkpoint_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 383
-        width: 1920
-        height: 697
+        x: 57
+        y: 89
+        width: 384
+        height: 653
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 291d8a76f7adda1b0800000000000000
-      internalID: -5643614517290544750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nivel2.1_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1007
-        height: 493
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60bf5aa06d4783830800000000000000
-      internalID: 4051116327470234374
+      spriteID: b6f12861740d520d0800000000000000
+      internalID: -3448120935943364757
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nivel2.1_0: -5643614517290544750
-      nivel2.1_1: 4051116327470234374
+      Checkpoint_0: -3448120935943364757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

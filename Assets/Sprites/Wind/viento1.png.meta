@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: a18e1b18bb1825644a04a5292777b92d
+guid: 0ddc3bc0a69971445a19ec3b674247df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1307562342194425162
-    second: nivel2.5_0
+      213: -3246893422936681202
+    second: viento1_0
   - first:
-      213: 1478037047709042685
-    second: nivel2.5_1
+      213: 4996084117293007258
+    second: viento1_1
+  - first:
+      213: 5871539288813838318
+    second: viento1_2
+  - first:
+      213: 8389075944089443334
+    second: viento1_3
+  - first:
+      213: 6944920503964340162
+    second: viento1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nivel2.5_0
+      name: viento1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1545
-        height: 1080
+        x: 530
+        y: 612
+        width: 417
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4d2d20c505652210800000000000000
-      internalID: 1307562342194425162
+      spriteID: e059e4672a7b0f2d0800000000000000
+      internalID: -3246893422936681202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nivel2.5_1
+      name: viento1_1
       rect:
         serializedVersion: 2
-        x: 708
-        y: 0
-        width: 1212
-        height: 1080
+        x: 1553
+        y: 641
+        width: 300
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +149,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df780992dda038410800000000000000
-      internalID: 1478037047709042685
+      spriteID: a918837c808a55540800000000000000
+      internalID: 4996084117293007258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: viento1_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 439
+        width: 389
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef9f7adfd5eb7150800000000000000
+      internalID: 5871539288813838318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: viento1_3
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 468
+        width: 343
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60cd939bf1cfb6470800000000000000
+      internalID: 8389075944089443334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: viento1_4
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 478
+        width: 328
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf0f101760516060800000000000000
+      internalID: 6944920503964340162
       vertices: []
       indices: 
       edges: []
@@ -160,8 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nivel2.5_0: 1307562342194425162
-      nivel2.5_1: 1478037047709042685
+      viento1_0: -3246893422936681202
+      viento1_1: 4996084117293007258
+      viento1_2: 5871539288813838318
+      viento1_3: 8389075944089443334
+      viento1_4: 6944920503964340162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
