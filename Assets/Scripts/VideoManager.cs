@@ -20,6 +20,12 @@ public class VideoManager : MonoBehaviour
 
     private IEnumerator ChangeScene() {
         yield return new WaitForSeconds(VideoLength);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if(currentScene == 1) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else {
+            SceneManager.LoadScene(0);
+        }
     }
 }
