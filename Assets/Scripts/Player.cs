@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -52,6 +53,9 @@ public class Player : MonoBehaviour
             Rigidbody.linearVelocity = Vector2.zero;
             Rigidbody.gravityScale = 0f;
             UnStuckDirection = collidedObj.transform.up;
+        }
+        else if(collidedObj.tag == "Finish") {
+            StartCoroutine(GoToNextLevel(0.1f));
         }
     }
 
@@ -121,4 +125,10 @@ public class Player : MonoBehaviour
         transform.position = CurrentCheckpoint;
         SetPlayerActive(true);
     }
+
+    private IEnumerator GoToNextLevel(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
 }
