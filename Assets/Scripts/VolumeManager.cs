@@ -8,21 +8,21 @@ public class VolumeManager : MonoBehaviour
     [SerializeField] private Slider MusicSlider;
     [SerializeField] private Slider SFXSlider;
 
+    private float DefaultVolume = 0.75f;
+
     private void Awake() {
-        if(PlayerPrefs.HasKey("MusicVolume")) {
-            SetSliders();
-            SetAudioMixer();
-        }
+        SetSliders();
+        SetAudioMixer();
     }
 
     private void SetSliders() {
-        MusicSlider.value = PlayerPrefs.GetFloat("MusicSlider", 0.75f);
-        SFXSlider.value = PlayerPrefs.GetFloat("SFXSlider", 0.75f);
+        MusicSlider.value = PlayerPrefs.GetFloat("MusicSlider", DefaultVolume);
+        SFXSlider.value = PlayerPrefs.GetFloat("SFXSlider", DefaultVolume);
     }
 
     private void SetAudioMixer() {
-        Audiomixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume")) * 20);
-        Audiomixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume")) * 20);
+        Audiomixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFXVolume", DefaultVolume)) * 20);
+        Audiomixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume", DefaultVolume)) * 20);
     }
 
     public void UpdateMusicVolume() {
