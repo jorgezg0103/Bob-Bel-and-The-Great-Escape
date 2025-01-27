@@ -2523,6 +2523,7 @@ MonoBehaviour:
   PauseButton: {fileID: 0}
   MainMenuImage: {fileID: 1654244990}
   TutorialImage: {fileID: 1676555064}
+  CheckpointText: {fileID: 0}
 --- !u!114 &1785329020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,6 +2539,63 @@ MonoBehaviour:
   Audiomixer: {fileID: 24100000, guid: 0379f7eb0ccbdea448d97dc64a8bc62a, type: 2}
   MusicSlider: {fileID: 1175109322}
   SFXSlider: {fileID: 387719751}
+--- !u!1001 &1816168286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.439186
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -15.779184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.35285103
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976795199303186350, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659133843228710259, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47eaba53579347c43b59f5a2426776b9, type: 3}
 --- !u!1 &1855865765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,3 +3361,4 @@ SceneRoots:
   - {fileID: 1785329018}
   - {fileID: 1058791082}
   - {fileID: 968782347}
+  - {fileID: 1816168286}
