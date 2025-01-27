@@ -26,6 +26,7 @@ public class GameMenu : MonoBehaviour
 
     public void LoadScene(int index) {
         SceneManager.LoadScene(index);
+        Time.timeScale = 1;
     }
 
     public void GoToTutorial() {
