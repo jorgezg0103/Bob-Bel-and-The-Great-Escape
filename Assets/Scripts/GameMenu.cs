@@ -19,7 +19,9 @@ public class GameMenu : MonoBehaviour
     [SerializeField] private TMP_Text CheckpointText;
 
     private void Awake() {
-        CheckpointText.CrossFadeAlpha(0f, 0f, false);
+        if(CheckpointText != null) {
+            CheckpointText.CrossFadeAlpha(0f, 0f, false);
+        }
     }
 
     public void LoadScene(int index) {
