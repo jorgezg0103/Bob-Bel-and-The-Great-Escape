@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource BlorpSound;
     [SerializeField] private AudioSource CheckpointSound;
 
+    [SerializeField] private GameObject Menu;
+
     private float Health = 1f;
     private Vector2 CurrentCheckpoint;
     private float TimeInterval = 0.25f;
@@ -49,8 +51,11 @@ public class Player : MonoBehaviour
         // An interaction system with an Interface would be more appropiate :)
         GameObject collidedObj = collision.gameObject;
         if(collidedObj.tag == "Respawn") {
-            CurrentCheckpoint = collidedObj.transform.position;
-            CheckpointSound.Play();
+            if(CurrentCheckpoint != (Vector2)collidedObj.transform.position) {
+                CurrentCheckpoint = collidedObj.transform.position;
+                CheckpointSound.Play();
+                Menu.GetComponent<GameMenu>().ShowCheckpointSavedText();
+            }
         }
         else if(collidedObj.tag == "StickyWall") {
             Stuck = true;
