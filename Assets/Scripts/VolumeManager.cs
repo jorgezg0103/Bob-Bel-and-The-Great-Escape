@@ -16,8 +16,8 @@ public class VolumeManager : MonoBehaviour
     }
 
     private void SetSliders() {
-        MusicSlider.value = PlayerPrefs.GetFloat("MusicSlider", DefaultVolume);
-        SFXSlider.value = PlayerPrefs.GetFloat("SFXSlider", DefaultVolume);
+        MusicSlider.value = PlayerPrefs.GetFloat("MusicVolume", DefaultVolume);
+        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume", DefaultVolume);
     }
 
     private void SetAudioMixer() {

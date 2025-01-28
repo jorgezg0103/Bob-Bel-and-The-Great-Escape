@@ -21,6 +21,7 @@ public class VideoManager : MonoBehaviour
     void Prepared(VideoPlayer Video) {
         VideoLength = (float)(Video.frameCount / Video.frameRate);
         StartCoroutine(ChangeScene());
+        Video.SetDirectAudioVolume(0, PlayerPrefs.GetFloat("MusicVolume"));
         Video.Play();
     }
 
