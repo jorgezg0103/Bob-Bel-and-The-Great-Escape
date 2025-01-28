@@ -25,6 +25,8 @@ public class GameMenu : MonoBehaviour
     }
 
     public void LoadScene(int index) {
+        PlayerPrefs.Save();
+        Time.timeScale = 1;
         SceneManager.LoadScene(index);
     }
 

@@ -139,6 +139,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator GoToNextLevel(float seconds) {
         yield return new WaitForSeconds(seconds);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
