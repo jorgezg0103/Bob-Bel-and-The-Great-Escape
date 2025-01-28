@@ -30,9 +30,11 @@ public class VideoManager : MonoBehaviour
         yield return new WaitForSeconds(VideoLength);
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         if(currentScene == 1) {
+            PlayerPrefs.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else {
+            PlayerPrefs.Save();
             SceneManager.LoadScene(0);
         }
     }
