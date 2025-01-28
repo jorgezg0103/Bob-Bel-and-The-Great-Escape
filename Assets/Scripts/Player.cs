@@ -48,7 +48,7 @@ public class Player : MonoBehaviour {
                 }
             }
             else {
-                if(Keyboard.current.anyKey.wasPressedThisFrame) {
+                if(Keyboard.current.anyKey.wasPressedThisFrame || (Input.touchCount > 0 && Input.GetTouch(0).phase == UnityEngine.TouchPhase.Ended)) {
                     TryToUnStuck();
                 }
             }
