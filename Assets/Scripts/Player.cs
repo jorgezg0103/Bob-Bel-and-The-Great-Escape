@@ -136,7 +136,7 @@ public class Player : MonoBehaviour {
             MovePlayerOnce(Vector2.right);
         }
         if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
-            MovePlayerOnce(Vector2.right);
+            MovePlayerOnce(Vector2.down);
         }
     }
 
